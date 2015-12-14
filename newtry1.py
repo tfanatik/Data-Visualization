@@ -43,28 +43,7 @@ p_repream = df['W1_G2'].value_counts(sort = True,
 normalize = True,dropna=False) 
 print ('How well does Congress represent all Americans?')
 print (c_repream, p_repream)
-a = ('2', '3', '1', '-1')
-pd.crosstab(a, [c_repream, p_repream], rownames=['a'], colnames=['counts', 'percents'])
-crosstab(a, [b, c], rownames=['a'], colnames=['b', 'c'])
 
-def FreqTbl(x):
-    return pd.Series({'Counts': lambda x: x.value_counts(),
-#        'Percents': x.mean()})
-        'Percents': lambda x: x.value_counts(normalize = True)})
-#tbl = FreqTbl('W1_G2')
-
-
-tbl = df.groupby('W1_G2').apply(FreqTbl)
-print(tbl)
-#                                 'Percents': lambda x: x.value_counts(normalize = True)})
-#
-#Res2.columns = ['All', 'OfWgichParticipated', 'OfWhichPassed']
-
-
-def pivot_table(df['W1_G2'], values=b, index=a, columns=c, aggfunc=np.sum'mean',
-                fill_value=None, margins=False, dropna=True,
-                df['W1_G2'], values=b, index=a, columns=d, aggfunc='mean',
-                fill_value=None, margins=False, dropna=True):
 
 
 
